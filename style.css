@@ -1,83 +1,34 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset styles */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
     text-align: center;
     background-color: #f4f4f4;
 }
 
+/* Header */
 header {
     background-color: #333;
     color: white;
     padding: 15px;
+    position: relative;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-section {
-    padding: 20px;
-    background-color: white;
-    margin: 20px auto;
+/* Search Bar */
+#search {
     width: 80%;
-    max-width: 800px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-}
-
-footer {
-    background-color: #333;
-    color: white;
     padding: 10px;
-    margin-top: 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
-
-/* Style the header */
-header {
-    background-color: #333;
-    color: white;
-    padding: 15px;
-    text-align: center;
-}
-
-/* Style the navigation bar */
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Style the navigation bar */
+/* Navigation */
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -97,34 +48,56 @@ nav ul li a {
     padding: 15px 20px;
     display: block;
     font-size: 18px;
-    font-weight: bold;
 }
 
 nav ul li a:hover {
     background-color: #555;
 }
 
-/* Dropdown menu styling */
-.dropdown-menu {
+/* Mobile Navigation (Hidden by Default) */
+.hamburger {
     display: none;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
     position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+/* Mobile Menu Styling */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 50px;
+        left: 0;
+    }
+
+    .nav-links li {
+        display: block;
+        width: 100%;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+/* Show Menu on Click */
+.nav-active {
+    display: flex !important;
+}
+
+/* Footer */
+footer {
     background-color: #333;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-menu li {
-    display: block;
-}
-
-.dropdown-menu li a {
-    padding: 12px 16px;
-    display: block;
-    text-align: left;
-}
-
-/* Show dropdown menu when hovering */
-.dropdown:hover .dropdown-menu {
-    display: block;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
 }
