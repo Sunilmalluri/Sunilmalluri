@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sunil Malluri Data Solutions</title>
+    <meta name="description" content="Sunil Malluri - Data Analytics tutorials and resources for Excel, Power BI, and Tableau">
+    <title>Sunil Malluri | Data Analytics Tutorials</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
 </head>
 <body>
     <header>
-        <h1>Welcome to Sunil Malluri Data Solutions</h1>
-        <input type="text" id="search" placeholder="Search topics...">
-        <button class="hamburger">&#9776;</button>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
+        <h1>Sunil Malluri Data Solutions</h1>
+        <button class="hamburger">☰</button>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="excel.html">Excel</a></li>
                 <li><a href="powerbi.html">Power BI</a></li>
                 <li><a href="tableau.html">Tableau</a></li>
@@ -24,24 +23,125 @@
         </nav>
     </header>
 
-    <section>
-        <h2>Learn Excel, Power BI, and Tableau</h2>
-        <p>Explore tutorials and resources to enhance your skills.</p>
-    </section>
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h2>Master Data Analytics with Practical Tutorials</h2>
+                <p>Learn Excel, Power BI, and Tableau through step-by-step guides and real-world examples</p>
+                <a href="#tutorials" class="cta-button">Explore Tutorials</a>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="about-container">
+                <div class="profile-image">
+                    <img src="images/profile.jpg" alt="Sunil Malluri" width="150">
+                </div>
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p>Hi, I'm <strong>Sunil Malluri</strong>, a data analytics professional passionate about helping others develop their skills in business intelligence and data visualization.</p>
+                    <p>With experience in data analysis across multiple industries, I create practical tutorials that focus on real-world applications of Excel, Power BI, and Tableau.</p>
+                    <div class="contact-info">
+                        <p><span>📧</span> <a href="mailto:sunilmalluri08@gmail.com">sunilmalluri08@gmail.com</a></p>
+                        <p><span>🔗</span> <a href="https://www.linkedin.com/in/sunil-malluri" target="_blank">linkedin.com/in/sunil-malluri</a></p>
+                        <p><span>📍</span> Hyderabad, India</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tutorials">
+            <h2>Featured Tutorials</h2>
+            <div class="tutorial-grid">
+                <article class="tutorial-card">
+                    <img src="images/excel-icon.png" alt="Excel Tutorials">
+                    <h3>Excel Mastery</h3>
+                    <p>From basic formulas to advanced Power Query techniques</p>
+                    <a href="excel.html" class="card-button">Learn Excel</a>
+                </article>
+                
+                <article class="tutorial-card">
+                    <img src="images/powerbi-icon.png" alt="Power BI Tutorials">
+                    <h3>Power BI Guides</h3>
+                    <p>DAX, data modeling, and interactive dashboards</p>
+                    <a href="powerbi.html" class="card-button">Learn Power BI</a>
+                </article>
+                
+                <article class="tutorial-card">
+                    <img src="images/tableau-icon.png" alt="Tableau Tutorials">
+                    <h3>Tableau Visualizations</h3>
+                    <p>Calculations, parameters, and advanced analytics</p>
+                    <a href="tableau.html" class="card-button">Learn Tableau</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="resources">
+            <h2>Free Resources</h2>
+            <div class="resource-list">
+                <div class="resource-item">
+                    <h3>📁 Sample Datasets</h3>
+                    <p>Practice with real-world data files for all tutorials</p>
+                    <a href="https://github.com/Sunilmalluri/Sunilmalluri/" target="_blank" class="resource-link">Download on GitHub →</a>
+                </div>
+                <div class="resource-item">
+                    <h3>📝 Cheat Sheets</h3>
+                    <p>Quick reference guides for Excel formulas and DAX</p>
+                    <a href="https://github.com/Sunilmalluri/Sunilmalluri/" target="_blank" class="resource-link">Download PDFs →</a>
+                </div>
+                <div class="resource-item">
+                    <h3>🎥 Video Tutorials</h3>
+                    <p>Step-by-step video walkthroughs of key concepts</p>
+                    <a href="#" class="resource-link">Coming Soon →</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog-preview">
+            <h2>Latest from the Blog</h2>
+            <div class="blog-grid">
+                <article class="blog-post">
+                    <h3>5 Power BI Performance Tips</h3>
+                    <p class="post-date">June 15, 2024</p>
+                    <p>Optimize your Power BI reports with these practical techniques...</p>
+                    <a href="blog.html#powerbi-tips" class="read-more">Read More</a>
+                </article>
+                <article class="blog-post">
+                    <h3>Excel's Most Powerful Functions</h3>
+                    <p class="post-date">May 28, 2024</p>
+                    <p>Discover the Excel functions that will transform your data analysis...</p>
+                    <a href="blog.html#excel-functions" class="read-more">Read More</a>
+                </article>
+            </div>
+            <a href="blog.html" class="cta-button">View All Posts</a>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2025 Sunil Malluri Data Solutions. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="excel.html">Excel Tutorials</a></li>
+                    <li><a href="powerbi.html">Power BI Tutorials</a></li>
+                    <li><a href="tableau.html">Tableau Tutorials</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Connect</h3>
+                <ul>
+                    <li><a href="https://github.com/Sunilmalluri/Sunilmalluri/" target="_blank">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/sunil-malluri" target="_blank">LinkedIn</a></li>
+                    <li><a href="mailto:sunilmalluri08@gmail.com">Email</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Sunil Malluri Data Solutions. All rights reserved.</p>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
-
-
-<section id="about">
-    <h2>About Me</h2>
-    <img src="profile.jpg" alt="Your Name" width="70">
-    <p>Hi, I'm <strong>Sunil</strong>, an expert in Excel, Power BI, and Tableau. I love sharing knowledge through tutorials and blogs.</p>
-    <p>📧 Email: <a href="mailto:sunilmalluri08@gmail.com">sunilmalluri08@gmail.com</a></p>
-    <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
-    <p>📍 Location: India</p>
-</section>
