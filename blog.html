@@ -4,203 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Data analytics blog featuring tutorials on Excel, Power BI, and Tableau">
+    <meta name="keywords" content="data analytics, Excel, Power BI, Tableau, blog, Sunil Malluri">
+    <meta name="author" content="Sunil Malluri">
     <title>Data Analytics Blog | Sunil Malluri</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Blog-specific styles */
-        .blog-header {
-            background-color: #007bff;
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        
-        .blog-header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-        
-        .blog-header p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .blog-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 40px;
-        }
-        
-        .blog-posts {
-            display: grid;
-            gap: 40px;
-        }
-        
-        .blog-post {
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .post-image {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-        }
-        
-        .post-content {
-            padding: 30px;
-        }
-        
-        .post-meta {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-            color: #666;
-            font-size: 0.9rem;
-        }
-        
-        .post-date {
-            margin-right: 20px;
-        }
-        
-        .post-category {
-            background-color: #f0f0f0;
-            padding: 3px 10px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-        }
-        
-        .post-content h2 {
-            color: #007bff;
-            margin-bottom: 15px;
-        }
-        
-        .post-excerpt {
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-        
-        .read-more {
-            display: inline-block;
-            color: #007bff;
-            font-weight: bold;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        
-        .read-more:hover {
-            text-decoration: underline;
-            transform: translateX(5px);
-        }
-        
-        .sidebar {
-            background: #f8f9fa;
-            padding: 30px;
-            border-radius: 8px;
-            height: fit-content;
-        }
-        
-        .sidebar h3 {
-            color: #007bff;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #007bff;
-        }
-        
-        .categories-list, .popular-posts {
-            list-style: none;
-            margin-bottom: 30px;
-        }
-        
-        .categories-list li, .popular-posts li {
-            margin-bottom: 10px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        
-        .categories-list a, .popular-posts a {
-            color: #333;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        
-        .categories-list a:hover, .popular-posts a:hover {
-            color: #007bff;
-            padding-left: 5px;
-        }
-        
-        .newsletter-form input {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        
-        .newsletter-form button {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 4px;
-            cursor: pointer;
-            width: 100%;
-            transition: background-color 0.3s ease;
-        }
-        
-        .newsletter-form button:hover {
-            background-color: #0056b3;
-        }
-        
-        .pagination {
-            display: flex;
-            justify-content: center;
-            margin-top: 40px;
-            grid-column: 1 / -1;
-        }
-        
-        .pagination a {
-            color: #007bff;
-            padding: 8px 16px;
-            text-decoration: none;
-            border: 1px solid #ddd;
-            margin: 0 4px;
-            border-radius: 4px;
-        }
-        
-        .pagination a.active {
-            background-color: #007bff;
-            color: white;
-            border: 1px solid #007bff;
-        }
-        
-        .pagination a:hover:not(.active) {
-            background-color: #ddd;
-        }
-        
-        @media (max-width: 768px) {
-            .blog-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .sidebar {
-                order: -1;
-            }
-        }
-    </style>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
         <h1>Sunil Malluri Data Solutions</h1>
-        <button class="hamburger">☰</button>
-        <nav class="nav-links">
+        <button class="hamburger" aria-label="Toggle navigation menu">☰</button>
+        <nav class="nav-links" aria-label="Main navigation" role="navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="excel.html">Excel</a></li>
@@ -212,15 +26,15 @@
         </nav>
     </header>
 
-    <div class="blog-header">
+    <section class="blog-header">
         <h1>Data Analytics Blog</h1>
         <p>Practical tutorials, tips, and insights on Excel, Power BI, and Tableau to enhance your data analysis skills</p>
-    </div>
+    </section>
 
     <div class="blog-container">
         <main class="blog-posts">
             <article class="blog-post">
-                <img src="images/powerbi-dashboard.jpg" alt="Power BI Dashboard" class="post-image">
+                <img src="images/powerbi-dashboard.jpg" alt="Power BI Dashboard Example" class="post-image">
                 <div class="post-content">
                     <div class="post-meta">
                         <span class="post-date">June 15, 2025</span>
@@ -228,12 +42,12 @@
                     </div>
                     <h2>5 Power BI Performance Optimization Techniques</h2>
                     <p class="post-excerpt">Learn how to make your Power BI reports run faster with these practical optimization techniques. From data model improvements to DAX optimizations, this guide covers essential strategies for enterprise-level reports.</p>
-                    <a href="blog/powerbi-performance.html" class="read-more">Read More →</a>
+                    <a href="blog/powerbi-performance.html" class="read-more">Read More</a>
                 </div>
             </article>
 
             <article class="blog-post">
-                <img src="images/excel-functions.jpg" alt="Excel Functions" class="post-image">
+                <img src="images/excel-functions.jpg" alt="Excel Functions Screenshot" class="post-image">
                 <div class="post-content">
                     <div class="post-meta">
                         <span class="post-date">June 8, 2025</span>
@@ -241,12 +55,12 @@
                     </div>
                     <h2>Advanced Excel Functions Every Analyst Should Master</h2>
                     <p class="post-excerpt">Discover the most powerful Excel functions that can transform your data analysis workflow. We cover XLOOKUP, LET, LAMBDA, and other modern functions with practical examples from real business scenarios.</p>
-                    <a href="blog/excel-functions.html" class="read-more">Read More →</a>
+                    <a href="blog/excel-functions.html" class="read-more">Read More</a>
                 </div>
             </article>
 
             <article class="blog-post">
-                <img src="images/tableau-lod.jpg" alt="Tableau LOD Expressions" class="post-image">
+                <img src="images/tableau-lod.jpg" alt="Tableau LOD Expressions Visualization" class="post-image">
                 <div class="post-content">
                     <div class="post-meta">
                         <span class="post-date">June 1, 2025</span>
@@ -254,12 +68,12 @@
                     </div>
                     <h2>Demystifying Level of Detail (LOD) Expressions in Tableau</h2>
                     <p class="post-excerpt">LOD expressions can be challenging but incredibly powerful. This comprehensive guide explains FIXED, INCLUDE, and EXCLUDE expressions with clear examples and when to use each type in your visualizations.</p>
-                    <a href="blog/tableau-lod.html" class="read-more">Read More →</a>
+                    <a href="blog/tableau-lod.html" class="read-more">Read More</a>
                 </div>
             </article>
 
             <article class="blog-post">
-                <img src="images/data-storytelling.jpg" alt="Data Storytelling" class="post-image">
+                <img src="images/data-storytelling.jpg" alt="Data Storytelling Concept" class="post-image">
                 <div class="post-content">
                     <div class="post-meta">
                         <span class="post-date">May 25, 2025</span>
@@ -267,12 +81,12 @@
                     </div>
                     <h2>The Art of Data Storytelling: How to Communicate Insights Effectively</h2>
                     <p class="post-excerpt">Data analysis is only valuable if you can communicate your findings effectively. Learn frameworks and techniques for turning complex data into compelling narratives that drive business decisions.</p>
-                    <a href="blog/data-storytelling.html" class="read-more">Read More →</a>
+                    <a href="blog/data-storytelling.html" class="read-more">Read More</a>
                 </div>
             </article>
 
             <article class="blog-post">
-                <img src="images/powerquery.jpg" alt="Power Query" class="post-image">
+                <img src="images/powerquery.jpg" alt="Power Query Interface" class="post-image">
                 <div class="post-content">
                     <div class="post-meta">
                         <span class="post-date">May 18, 2025</span>
@@ -280,25 +94,25 @@
                     </div>
                     <h2>Power Query Best Practices for Efficient Data Transformation</h2>
                     <p class="post-excerpt">Optimize your Power Query workflows with these professional tips. From query folding to parameterization, learn how to build robust, maintainable data transformation processes in Power BI and Excel.</p>
-                    <a href="blog/powerquery-best-practices.html" class="read-more">Read More →</a>
+                    <a href="blog/powerquery-best-practices.html" class="read-more">Read More</a>
                 </div>
             </article>
 
-            <div class="pagination">
-                <a href="#">&laquo;</a>
-                <a href="#" class="active">1</a>
+            <nav class="pagination" aria-label="Blog pagination">
+                <a href="#" aria-label="Previous page">«</a>
+                <a href="#" class="active" aria-current="page">1</a>
                 <a href="#">2</a>
                 <a href="#">3</a>
-                <a href="#">&raquo;</a>
-            </div>
+                <a href="#" aria-label="Next page">»</a>
+            </nav>
         </main>
 
         <aside class="sidebar">
             <div class="sidebar-widget">
                 <h3>Search Blog</h3>
                 <form class="search-form">
-                    <input type="text" placeholder="Search articles...">
-                    <button type="submit">Search</button>
+                    <input type="search" id="search" placeholder="Search articles..." aria-label="Search blog articles">
+                    <button type="submit" aria-label="Submit search">Search</button>
                 </form>
             </div>
 
@@ -308,7 +122,7 @@
                     <li><a href="blog/category/excel.html">Excel (23)</a></li>
                     <li><a href="blog/category/powerbi.html">Power BI (18)</a></li>
                     <li><a href="blog/category/tableau.html">Tableau (15)</a></li>
-                    <li><a href="blog/category/dax.html">DAX Formulas (12)</a></li>
+                    <li><に対する href="blog/category/dax.html">DAX Formulas (12)</a></li>
                     <li><a href="blog/category/powerquery.html">Power Query (9)</a></li>
                     <li><a href="blog/category/best-practices.html">Best Practices (7)</a></li>
                 </ul>
@@ -328,9 +142,9 @@
             <div class="sidebar-widget">
                 <h3>Newsletter</h3>
                 <p>Subscribe to get the latest tutorials and resources directly to your inbox.</p>
-                <form class="newsletter-form">
-                    <input type="text" placeholder="Your Name">
-                    <input type="email" placeholder="Your Email">
+                <form class="newsletter-form" aria-label="Newsletter subscription">
+                    <input type="text" placeholder="Your Name" aria-label="Your name">
+                    <input type="email" placeholder="Your Email" aria-label="Your email" required>
                     <button type="submit">Subscribe</button>
                 </form>
             </div>
@@ -351,14 +165,14 @@
             <div class="footer-contact">
                 <h3>Connect</h3>
                 <ul>
-                    <li><a href="https://github.com/Sunilmalluri/Sunilmalluri/" target="_blank">GitHub</a></li>
-                    <li><a href="https://www.linkedin.com/in/sunil-malluri" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://github.com/Sunilmalluri/Sunilmalluri/" target="_blank" rel="noopener">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/sunil-malluri" target="_blank" rel="noopener">LinkedIn</a></li>
                     <li><a href="mailto:sunilmalluri08@gmail.com">Email</a></li>
                 </ul>
             </div>
         </div>
         <div class="copyright">
-            <p>&copy; 2025 Sunil Malluri Data Solutions. All rights reserved.</p>
+            <p>© 2025 Sunil Malluri Data Solutions. All rights reserved.</p>
         </div>
     </footer>
 
