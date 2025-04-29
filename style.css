@@ -78,22 +78,28 @@ nav ul li a:hover {
 
   .nav-links {
     display: none;
-    flex-direction: column;
     width: 100%;
     background-color: #2E2E2E;
     position: absolute;
     top: 70px;
     left: 0;
     padding: 10px 0;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
     transform: translateY(-10px);
     opacity: 0;
   }
 
   .nav-links.nav-active {
-    display: flex;
+    display: block; /* Changed to block for vertical flow */
     transform: translateY(0);
     opacity: 1;
+  }
+
+  .nav-links ul {
+    display: flex;
+    flex-direction: column; /* Explicitly vertical */
+    align-items: stretch;
+    justify-content: flex-start;
   }
 
   .nav-links li {
@@ -106,7 +112,7 @@ nav ul li a:hover {
   }
 
   .nav-links li a {
-    padding: 15px 20px;
+    padding: 20px;
     font-size: 1.2rem;
     text-align: left;
     display: block;
@@ -746,5 +752,5 @@ section {
   }
 }
 
-/* Import Gootgle Fonts */
+/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap');
