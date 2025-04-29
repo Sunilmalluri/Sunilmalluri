@@ -3,40 +3,224 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Power BI Tutorials</title>
+    <meta name="description" content="Master Power BI for data analysis with tutorials on DAX, visualizations, data modeling, and dashboards.">
+    <title>Power BI Tutorials for Data Analysis</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Power BI Tutorials</h1>
-        <nav>
+        <h1>Power BI Tutorials for Data Analysis</h1>
+        <button class="hamburger">☰</button>
+        <nav class="nav-links">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="excel.html">Excel</a></li>
+                <li><a href="powerbi.html">Power BI</a></li>
                 <li><a href="tableau.html">Tableau</a></li>
             </ul>
         </nav>
     </header>
 
-    <section>
-        <h2>Learn Power BI</h2>
-        <p>Here you will find Power BI tutorials, DAX formulas, and dashboard creation tips.</p>
+    <section id="intro">
+        <h2>Master Power BI for Data Analysis</h2>
+        <p>Learn Power BI with tutorials, DAX formulas, and dashboard creation tips tailored for data analysts. From data import to advanced visualizations, build impactful reports.</p>
+        <input type="text" id="search" placeholder="Search tutorials...">
+    </section>
+
+    <section id="tutorials">
+        <h2>Power BI Tutorials</h2>
+        <!-- Beginner Tutorials -->
+        <div class="tutorial-level">
+            <h3>Beginner</h3>
+            <article class="tutorial">
+                <h4>Introduction to Power BI Desktop</h4>
+                <img src="images/powerbi_desktop.png" alt="Power BI Desktop interface showing Report, Data, and Model views">
+                <p>Power BI Desktop is a free tool for creating interactive reports and dashboards.</p>
+                <p><strong>Steps</strong>:</p>
+                <ol>
+                    <li>Download from <a href="https://powerbi.microsoft.com/" target="_blank">Microsoft</a>.</li>
+                    <li>Open and explore Report, Data, and Model views.</li>
+                    <li>Create a simple table visual from sample data.</li>
+                </ol>
+                <p><strong>Practice</strong>: Install Power BI Desktop and load a sample dataset.</p>
+                <a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">Download Sample Dataset</a>
+            </article>
+            <article class="tutorial">
+                <h4>Importing Data</h4>
+                <img src="images/powerbi_import.png" alt="Power BI data import wizard with Excel file">
+                <p>Connect Power BI to various data sources like Excel, CSV, or databases.</p>
+                <p><strong>Steps</strong>:</p>
+                <ol>
+                    <li>Click <strong>Home > Get Data > Excel</strong>.</li>
+                    <li>Select a file and use the Navigator to choose tables.</li>
+                    <li>Load or transform data in Power Query Editor.</li>
+                </ol>
+                <p><strong>Practice</strong>: Import a sales Excel file and preview the data.</p>
+                <a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">Download Sample Excel File</a>
+            </article>
+            <article class="tutorial">
+                <h4>Creating Basic Visualizations</h4>
+                <img src="images/powerbi_visuals.png" alt="Power BI bar chart of sales by product">
+                <p>Visuals like bar, line, and pie charts summarize data effectively.</p>
+                <p><strong>Steps</strong>:</p>
+                <ol>
+                    <li>Select a table in the Data pane.</li>
+                    <li>Click a visual type (e.g., Bar Chart) in the Visualizations pane.</li>
+                    <li>Drag fields (e.g., Product to Axis, Sales to Values).</li>
+                </ol>
+                <p><strong>Practice</strong>: Create a bar chart of sales by product.</p>
+                <a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">Download Visuals Template</a>
+            </article>
+            <article class="tutorial">
+                <h4>Filtering Data</h4>
+                <img src="images/powerbi_filters.png" alt="Power BI report with Region slicer">
+                <p>Slicers and filters make reports interactive.</p>
+                <p><strong>Steps</strong>:</p>
+                <ol>
+                    <li>Click <strong>Insert > Slicer</strong> and select a field (e.g., Region).</li>
+                    <li>Apply filters in the Filters pane (e.g., Sales > 1000).</li>
+                    <li>Test interactions between visuals and slicers.</li>
+                </ol>
+                <p><strong>Practice</strong>: Add a slicer for product categories.</p>
+                <a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">Download Filters Template</a>
+            </article>
+        </div>
+        <!-- Intermediate Tutorials -->
+        <div class="tutorial-level">
+            <h3>Intermediate</h3>
+            <article class="tutorial">
+                <h4>Introduction to DAX Formulas</h4>
+                <img src="images/powerbi_dax.png" alt="Power BI DAX editor with CALCULATE formula">
+                <p>Data Analysis Expressions (DAX) enable custom calculations.</p>
+                <p><strong>Examples</strong>:</p>
+                <ul>
+                    <li><strong>SUM</strong>: <code>Total Sales = SUM(Sales[Amount])</code></li>
+                    <li><strong>CALCULATE</strong>: <code>Sales North = CALCULATE(SUM(Sales[Amount]), Sales[Region] = "North")</code></li>
+                    <li><strong>COUNT</strong>: <code>Order Count = COUNT(Sales[OrderID])</code></li>
+                </ul>
+                <p><strong>Practice</strong>: Create a measure for total sales in a specific region.</p>
+                <a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">Download DAX Template</a>
+            </article>
+            <article class="tutorial">
+                <h4>Data Modeling</h4>
+                <img src="images/powerbi_modeling.png" alt="Power BI Model view with table relationships">
+                <p>Relationships between tables enable accurate analysis.</p>
+                <p><strong>Steps</strong>:</p>
+                <ol>
+                    <li>Go to Model view.</li>
+                    <li>Drag to connect keys (e.g., Sales[ProductID] to Products[ProductID]).</li>
+                    <li>Set cardinality (e.g., one-to-many) and cross-filter direction.</li>
+                </ol>
+                <p><strong>Practice</strong>: Link Sales and Products tables.</p>
+                <a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">Download Modeling Template</a>
+            </article>
+            <article class="tutorial">
+                <h4>Interactive Visuals</h4>
+                <img src="images/powerbi_interactive.png" alt="Power BI report with drill-down chart">
+                <p>Drill-down and cross-filtering enhance interactivity.</p>
+                <p><strong>Steps</strong>:</p>
+                <ol>
+                    <li>Enable drill-down on a chart (click the drill-down icon).</li>
+                    <li>Add multiple visuals; click one to cross-filter others.</li>
+                    <li>Use <strong>Interactions</strong> to customize filtering behavior.</li>
+                </ol>
+                <p><strong>Practice</strong>: Create a report with drill-down by year and region.</p>
+                <a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">Download Interactive Template</a>
+            </article>
+            <article class="tutorial">
+                <h4>Publishing Reports</h4>
+                <img src="images/powerbi_publish.png" alt="Power BI Service with published report">
+                <p>Share reports via Power BI Service for collaboration.</p>
+                <p><strong>Steps</strong>:</p>
+                <ol>
+                    <li>Click <strong>Publish</strong> in Power BI Desktop.</li>
+                    <li>Sign in to Power BI Service and select a workspace.</li>
+                    <li>Share the report with team members via link or permissions.</li>
+                </ol>
+                <p><strong>Practice</strong>: Publish a sample report to a workspace.</p>
+                <a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">Download PBIX File</a>
+            </article>
+        </div>
+        <!-- Advanced Tutorials -->
+        <div class="tutorial-level">
+            <h3>Advanced</h3>
+            <article class="tutorial">
+                <h4>Advanced DAX</h4>
+                <img src="images/powerbi_advanced_dax.png" alt="Power BI DAX measure with variables">
+                <p>Complex DAX measures enable sophisticated analytics.</p>
+                <p><strong>Example</strong>:</p>
+                <pre>
+YOY Growth = 
+VAR CurrentYear = SUM(Sales[Amount])
+VAR PreviousYear = CALCULATE(SUM(Sales[Amount]), PREVIOUSYEAR(Sales[Date]))
+RETURN
+DIVIDE(CurrentYear - PreviousYear, PreviousYear, 0)
+                </pre>
+                <p><strong>Steps</strong>:</p>
+                <ol>
+                    <li>Create a new measure in the Fields pane.</li>
+                    <li>Use variables for clarity and performance.</li>
+                    <li>Test in a visual (e.g., KPI card).</li>
+                </ol>
+                <p><strong>Practice</strong>: Calculate year-over-year sales growth.</p>
+                <a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">Download Advanced DAX Template</a>
+            </article>
+            <article class="tutorial">
+                <h4>Power Query for Data Transformation</h4>
+                <img src="images/powerbi_power_query.png" alt="Power Query Editor transforming data">
+                <p>Power Query cleans and shapes data before loading.</p>
+                <p><strong>Steps</strong>:</p>
+                <ol>
+                    <li>Click <strong>Transform Data</strong> after importing.</li>
+                    <li>Remove nulls, split columns, or merge tables in Power Query Editor.</li>
+                    <li>Apply and load to Power BI.</li>
+                </ol>
+                <p><strong>Practice</strong>: Clean a CSV file by removing duplicates and splitting names.</p>
+                <a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">Download Power Query Template</a>
+            </article>
+            <article class="tutorial">
+                <h4>Dynamic Dashboards</h4>
+                <img src="images/powerbi_dashboard.png" alt="Power BI dashboard with KPI cards and charts">
+                <p>Dashboards provide at-a-glance insights.</p>
+                <p><strong>Steps</strong>:</p>
+                <ol>
+                    <li>Create visuals for KPIs (e.g., Total Sales, Growth).</li>
+                    <li>Add bookmarks for different views (e.g., Overview, Details).</li>
+                    <li>Pin visuals to a dashboard in Power BI Service.</li>
+                </ol>
+                <p><strong>Practice</strong>: Build a sales dashboard with bookmarks.</p>
+                <a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">Download Dashboard Template</a>
+            </article>
+            <article class="tutorial">
+                <h4>Power BI Embedded</h4>
+                <img src="images/powerbi_embedded.png" alt="Webpage with embedded Power BI report">
+                <p>Embed reports in web applications for external users.</p>
+                <p><strong>Steps</strong>:</p>
+                <ol>
+                    <li>Publish a report to Power BI Service.</li>
+                    <li>Generate an embed code via <strong>File > Embed Report > Website or Portal</strong>.</li>
+                    <li>Integrate into HTML using an iframe.</li>
+                </ol>
+                <p><strong>Practice</strong>: Embed a report in a sample webpage.</p>
+                <a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">Download Embedded Example</a>
+            </article>
+        </div>
+    </section>
+
+    <section id="resources">
+        <h2>Resources</h2>
+        <p>Download templates and datasets to practice your skills:</p>
+        <ul>
+            <li><a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">GitHub Repository</a></li>
+            <li><a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">Sample Sales Dataset</a></li>
+            <li><a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">Power BI Templates</a></li>
+        </ul>
     </section>
 
     <footer>
-        <p>&copy; 2025 My Knowledge Base. All rights reserved.</p>
+        <p>© 2025 Sunil Malluri. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
-<header>
-    <h1>Excel Tutorials</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="excel.html">Excel</a></li>
-            <li><a href="powerbi.html">Power BI</a></li>
-            <li><a href="tableau.html">Tableau</a></li>
-        </ul>
-    </nav>
-</header>
