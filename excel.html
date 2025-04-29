@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn Excel for data analysis with tutorials on formulas, pivot tables, and VBA.">
     <title>Excel Tutorials for Data Analysis</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -28,27 +29,67 @@
     <section id="tutorials">
         <h2>Excel Tutorials</h2>
         <div class="tutorial-level">
-            <h3>Beginner</h3>
+            <h3>Beginner: Introduction to Excel Formulas</h3>
             <article>
-                <h4>Introduction to Excel Formulas</h4>
-                <p>Learn key formulas like SUM, AVERAGE, and IF to summarize data.</p>
-                <a href="#beginner-formulas">Read More</a>
+                <h4>Key Formulas for Data Summaries</h4>
+                <p>Excel formulas are the foundation of data analysis. Here are three essential formulas to get started:</p>
+                <ul>
+                    <li><strong>SUM</strong>: Adds values in a range. Example: <code>=SUM(A1:A10)</code> calculates the total of cells A1 to A10.</li>
+                    <li><strong>AVERAGE</strong>: Computes the mean of a range. Example: <code>=AVERAGE(B1:B10)</code> finds the average of cells B1 to B10.</li>
+                    <li><strong>IF</strong>: Performs conditional logic. Example: <code>=IF(C1>100, "High", "Low")</code> labels values above 100 as "High".</li>
+                </ul>
+                <p><strong>Practice</strong>: Create a dataset with sales data (e.g., column A for quantities, column B for prices). Use SUM to calculate total sales and IF to flag high-value transactions.</p>
+                <a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">Download Sample Dataset</a>
             </article>
         </div>
         <div class="tutorial-level">
-            <h3>Intermediate</h3>
+            <h3>Intermediate: Pivot Tables for Data Analysis</h3>
             <article>
-                <h4>Pivot Tables for Data Analysis</h4>
-                <p>Create dynamic summaries and uncover insights with pivot tables.</p>
-                <a href="#pivot-tables">Read More</a>
+                <h4>Creating Dynamic Summaries</h4>
+                <p>Pivot tables allow you to summarize and analyze large datasets without formulas. They’re perfect for exploring trends and patterns.</p>
+                <p><strong>Steps to Create a Pivot Table</strong>:</p>
+                <ol>
+                    <li>Select your dataset (e.g., sales data with columns: Date, Product, Region, Sales).</li>
+                    <li>Go to <strong>Insert > Pivot Table</strong> and choose a location (new or existing worksheet).</li>
+                    <li>Drag fields to areas:
+                        <ul>
+                            <li><strong>Rows</strong>: Product (to group by product).</li>
+                            <li><strong>Columns</strong>: Region (to compare across regions).</li>
+                            <li><strong>Values</strong>: Sales (set to Sum or Average).</li>
+                        </ul>
+                    </li>
+                    <li>Add filters (e.g., Date) to focus on specific time periods.</li>
+                </ol>
+                <p><strong>Practice</strong>: Use a pivot table to summarize total sales by product and region. Add a slicer for interactive filtering.</p>
+                <a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">Download Pivot Table Template</a>
             </article>
         </div>
         <div class="tutorial-level">
-            <h3>Advanced</h3>
+            <h3>Advanced: Automating Tasks with VBA</h3>
             <article>
-                <h4>Automating Tasks with VBA</h4>
-                <p>Write VBA macros to streamline repetitive data tasks.</p>
-                <a href="#vba-macros">Read More</a>
+                <h4>Streamlining Repetitive Tasks</h4>
+                <p>Visual Basic for Applications (VBA) lets you automate repetitive Excel tasks, such as formatting or data processing.</p>
+                <p><strong>Example: Auto-Format a Table</strong></p>
+                <pre>
+Sub FormatTable()
+    Dim ws As Worksheet
+    Set ws = ActiveSheet
+    With ws.Range("A1:D100")
+        .Interior.Color = RGB(200, 200, 200) ' Light gray background
+        .Borders.LineStyle = xlContinuous
+        .Rows(1).Font.Bold = True
+    End With
+    MsgBox "Table formatted!"
+End Sub
+                </pre>
+                <p><strong>How to Use</strong>:</p>
+                <ol>
+                    <li>Press <strong>Alt + F11</strong> to open the VBA editor.</li>
+                    <li>Insert a new module and paste the code above.</li>
+                    <li>Run the macro to format a table in cells A1:D100.</li>
+                </ol>
+                <p><strong>Practice</strong>: Modify the macro to highlight cells with values above a threshold (e.g., Sales > 1000).</p>
+                <a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">Download VBA Examples</a>
             </article>
         </div>
     </section>
@@ -57,8 +98,9 @@
         <h2>Resources</h2>
         <p>Download templates and datasets to practice your skills:</p>
         <ul>
-            <li><a href="https://github.com/Sunilmalluri/Sunilmalluri">GitHub Repository</a></li>
-            <li><a href="#sample-data">Sample Sales Dataset</a></li>
+            <li><a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">GitHub Repository</a></li>
+            <li><a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">Sample Sales Dataset</a></li>
+            <li><a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">Excel Templates</a></li>
         </ul>
     </section>
 
