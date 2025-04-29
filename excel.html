@@ -3,80 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Advanced Excel tutorials for data analysts with focus on data cleaning, analysis, and visualization techniques">
-    <title>Excel for Data Analysis | Advanced Tutorials & Techniques</title>
+    <title>Excel Tutorials for Data Analysis</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Excel for Data Analysis</h1>
-        <nav>
+        <h1>Excel Tutorials for Data Analysis</h1>
+        <button class="hamburger">☰</button>
+        <nav class="nav-links">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="excel.html" class="active">Excel</a></li>
+                <li><a href="excel.html">Excel</a></li>
                 <li><a href="powerbi.html">Power BI</a></li>
                 <li><a href="tableau.html">Tableau</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="intro">
+    <section id="intro">
         <h2>Master Excel for Data Analysis</h2>
-        <p>Professional-grade Excel tutorials specifically designed for data analysts. Learn advanced formulas, data cleaning techniques, and analytical methods to transform raw data into business insights.</p>
+        <p>Learn Microsoft Excel with tutorials, formulas, and tips tailored for data analysts. From data cleaning to advanced dashboards, level up your skills with practical examples.</p>
     </section>
 
-    <main id="blog">
-        <article>
-            <h2>Essential Excel Functions for Data Analysts</h2>
-            <p>Master these 15 critical functions: XLOOKUP, INDEX-MATCH, SUMIFS, AGGREGATE, and more with real-world business case examples.</p>
-            <a href="#">Read Tutorial</a>
-        </article>
-
-        <article>
-            <h2>Data Cleaning Techniques in Excel</h2>
-            <p>Learn professional methods to handle missing data, remove duplicates, standardize formats, and validate data quality using Power Query.</p>
-            <a href="#">Read Tutorial</a>
-        </article>
-
-        <article>
-            <h2>Advanced PivotTable Strategies</h2>
-            <p>Go beyond basics with calculated fields, GETPIVOTDATA, timeline filters, and dashboard creation techniques used by analysts at top firms.</p>
-            <a href="#">Read Tutorial</a>
-        </article>
-
-        <article>
-            <h2>Building Interactive Dashboards</h2>
-            <p>Combine PivotTables, slicers, conditional formatting, and form controls to create executive-ready dashboards that tell data stories.</p>
-            <a href="#">Read Tutorial</a>
-        </article>
-
-        <article>
-            <h2>Excel Power Tools for Analysts</h2>
-            <p>Deep dive into Power Query, Power Pivot, and DAX for handling millions of rows and creating sophisticated data models.</p>
-            <a href="#">Read Tutorial</a>
-        </article>
-    </main>
-
-    <section class="resources">
-        <h2>Analyst Resources</h2>
-        <div class="resource-grid">
-            <div class="resource-card">
-                <h3>Cheat Sheets</h3>
-                <p>Downloadable PDFs of keyboard shortcuts, formula references, and best practices</p>
-            </div>
-            <div class="resource-card">
-                <h3>Sample Datasets</h3>
-                <p>Practice with real-world datasets from finance, marketing, and operations</p>
-            </div>
-            <div class="resource-card">
-                <h3>Template Gallery</h3>
-                <p>Professional templates for financial models, KPI trackers, and analysis reports</p>
-            </div>
+    <section id="tutorials">
+        <h2>Excel Tutorials</h2>
+        <div class="tutorial-level">
+            <h3>Beginner</h3>
+            <article>
+                <h4>Introduction to Excel Formulas</h4>
+                <p>Learn key formulas like SUM, AVERAGE, and IF to summarize data.</p>
+                <a href="#beginner-formulas">Read More</a>
+            </article>
+        </div>
+        <div class="tutorial-level">
+            <h3>Intermediate</h3>
+            <article>
+                <h4>Pivot Tables for Data Analysis</h4>
+                <p>Create dynamic summaries and uncover insights with pivot tables.</p>
+                <a href="#pivot-tables">Read More</a>
+            </article>
+        </div>
+        <div class="tutorial-level">
+            <h3>Advanced</h3>
+            <article>
+                <h4>Automating Tasks with VBA</h4>
+                <p>Write VBA macros to streamline repetitive data tasks.</p>
+                <a href="#vba-macros">Read More</a>
+            </article>
         </div>
     </section>
 
+    <section id="resources">
+        <h2>Resources</h2>
+        <p>Download templates and datasets to practice your skills:</p>
+        <ul>
+            <li><a href="https://github.com/Sunilmalluri/Sunilmalluri">GitHub Repository</a></li>
+            <li><a href="#sample-data">Sample Sales Dataset</a></li>
+        </ul>
+    </section>
+
     <footer>
-        <p>&copy; 2025 Data Analyst Knowledge Base. All rights reserved.</p>
+        <p>© 2025 Sunil Malluri. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
