@@ -84,19 +84,39 @@ nav ul li a:hover {
     position: absolute;
     top: 70px;
     left: 0;
+    padding: 10px 0;
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+
+  .nav-links.nav-active {
+    display: flex;
+    transform: translateY(0);
+    opacity: 1;
   }
 
   .nav-links li {
     width: 100%;
+    border-bottom: 1px solid #444;
+  }
+
+  .nav-links li:last-child {
+    border-bottom: none;
   }
 
   .nav-links li a {
-    padding: 15px;
+    padding: 15px 20px;
+    font-size: 1.2rem;
+    text-align: left;
     display: block;
+    color: #FFF;
+    transition: background-color 0.3s ease, padding-left 0.3s ease;
   }
 
-  .nav-active {
-    display: flex !important;
+  .nav-links li a:hover {
+    background-color: #4A90E2;
+    padding-left: 30px;
   }
 }
 
@@ -726,5 +746,5 @@ section {
   }
 }
 
-/* Import Google Fonts */
+/* Import Gootgle Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap');
