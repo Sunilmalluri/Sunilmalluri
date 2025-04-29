@@ -3,40 +3,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tableau Tutorials</title>
+    <meta name="description" content="Master Tableau for data visualization with tutorials on calculations, dashboards, maps, and advanced analytics.">
+    <title>Tableau Tutorials for Data Visualization</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Tableau Tutorials</h1>
-        <nav>
+        <h1>Tableau Tutorials for Data Visualization</h1>
+        <button class="hamburger">☰</button>
+        <nav class="nav-links">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="excel.html">Excel</a></li>
                 <li><a href="powerbi.html">Power BI</a></li>
+                <li><a href="tableau.html">Tableau</a></li>
             </ul>
         </nav>
     </header>
 
-    <section>
-        <h2>Learn Tableau</h2>
-        <p>Here you will find Tableau tutorials, visualization techniques, and tips to create interactive dashboards.</p>
+    <section id="intro">
+        <h2>Master Tableau for Data Visualization</h2>
+        <p>Learn Tableau with tutorials on calculations, dashboard creation, mapping, and advanced analytics. From data connection to interactive visualizations, build impactful data stories.</p>
+        <input type="text" id="search" placeholder="Search tutorials...">
+    </section>
+
+    <section id="tutorials">
+        <h2>Tableau Tutorials</h2>
+        <!-- Beginner Tutorials -->
+        <div class="tutorial-level">
+            <h3>Beginner</h3>
+            <article class="tutorial">
+                <h4>Introduction to Tableau Desktop</h4>
+                <img src="images/tableau_interface.png" alt="Tableau Desktop interface showing Data and Worksheet views">
+                <p>Tableau Desktop is a powerful tool for creating interactive visualizations and dashboards.</p>
+                <p><strong>Steps</strong>:</p>
+                <ol>
+                    <li>Download from <a href="https://www.tableau.com/" target="_blank">Tableau website</a>.</li>
+                    <li>Open and explore Data Source and Worksheet views.</li>
+                    <li>Connect to Sample - Superstore dataset.</li>
+                </ol>
+                <p><strong>Practice</strong>: Install Tableau Desktop and explore the interface.</p>
+                <a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">Download Sample Dataset</a>
+            </article>
+            <article class="tutorial">
+                <h4>Connecting to Data</h4>
+                <img src="images/tableau_connect.png" alt="Tableau data connection interface">
+                <p>Tableau can connect to various data sources like Excel, CSV, or databases.</p>
+                <p><strong>Steps</strong>:</p>
+                <ol>
+                    <li>Click <strong>Connect to Data</strong> on the start page.</li>
+                    <li>Select a file type (e.g., Excel) and browse to your file.</li>
+                    <li>Drag tables to the canvas or select sheets to import.</li>
+                </ol>
+                <p><strong>Practice</strong>: Connect to a sales Excel file and preview the data.</p>
+                <a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">Download Sample Excel File</a>
+            </article>
+            <article class="tutorial">
+                <h4>Creating Basic Visualizations</h4>
+                <img src="images/tableau_basic_viz.png" alt="Tableau bar chart of sales by category">
+                <p>Create basic charts like bar, line, and pie charts to visualize your data.</p>
+                <p><strong>Steps</strong>:</p>
+                <ol>
+                    <li>Drag a dimension (e.g., Category) to Columns.</li>
+                    <li>Drag a measure (e.g., Sales) to Rows.</li>
+                    <li>Change chart type using the Show Me panel.</li>
+                </ol>
+                <p><strong>Practice</strong>: Create a bar chart of sales by product category.</p>
+                <a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">Download Visuals Template</a>
+            </article>
+            <article class="tutorial">
+                <h4>Using Filters</h4>
+                <img src="images/tableau_filters.png" alt="Tableau worksheet with region filter">
+                <p>Filters help you focus on specific portions of your data.</p>
+                <p><strong>Steps</strong>:</p>
+                <ol>
+                    <li>Drag a dimension (e.g., Region) to the Filters shelf.</li>
+                    <li>Select values to include in the filter dialog.</li>
+                    <li>Use quick filters for interactive filtering.</li>
+                </ol>
+                <p><strong>Practice</strong>: Add a filter for product categories to your chart.</p>
+                <a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">Download Filters Template</a>
+            </article>
+        </div>
+        <!-- Intermediate Tutorials -->
+        <div class="tutorial-level">
+            <h3>Intermediate</h3>
+            <article class="tutorial">
+                <h4>Calculated Fields</h4>
+                <img src="images/tableau_calculations.png" alt="Tableau calculated field editor">
+                <p>Create custom calculations to analyze your data in new ways.</p>
+                <p><strong>Examples</strong>:</p>
+                <ul>
+                    <li><strong>Profit Ratio</strong>: <code>[Profit]/[Sales]</code></li>
+                    <li><strong>Discount Flag</strong>: <code>IIF([Discount] > 0, "Discounted", "Full Price")</code></li>
+                    <li><strong>Sales Growth</strong>: <code>(SUM([Sales]) - LOOKUP(SUM([Sales]), -1)) / ABS(LOOKUP(SUM([Sales]), -1))</code></li>
+                </ul>
+                <p><strong>Practice</strong>: Create a calculated field for profit margin.</p>
+                <a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">Download Calculations Template</a>
+            </article>
+            <article class="tutorial">
+                <h4>Parameters</h4>
+                <img src="images/tableau_parameters.png" alt="Tableau parameter control">
+                <p>Parameters allow users to dynamically change values in calculations.</p>
+                <p><strong>Steps</strong>:</p>
+                <ol>
+                    <li>Right-click in the Data pane and select Create Parameter.</li>
+                    <li>Define data type, current value, and allowable values.</li>
+                    <li>Use the parameter in a calculated field.</li>
+                    <li>Show parameter control for user interaction.</li>
+                </ol>
+                <p><strong>Practice</strong>: Create a parameter to adjust discount thresholds.</p>
+                <a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">Download Parameters Template</a>
+            </article>
+            <article class="tutorial">
+                <h4>Dashboard Creation</h4>
+                <img src="images/tableau_dashboard.png" alt="Tableau dashboard with multiple views">
+                <p>Combine multiple views into interactive dashboards.</p>
+                <p><strong>Steps</strong>:</p>
+                <ol>
+                    <li>Create a new dashboard from the menu.</li>
+                    <li>Drag worksheets from the left pane to the dashboard.</li>
+                    <li>Add filters, parameters, and legends as needed.</li>
+                    <li>Use layout containers to organize elements.</li>
+                </ol>
+                <p><strong>Practice</strong>: Build a sales dashboard with multiple charts.</p>
+                <a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">Download Dashboard Template</a>
+            </article>
+            <article class="tutorial">
+                <h4>Mapping</h4>
+                <img src="images/tableau_maps.png" alt="Tableau map visualization">
+                <p>Create geographic visualizations with built-in maps.</p>
+                <p><strong>Steps</strong>:</p>
+                <ol>
+                    <li>Double-click on geographic fields (e.g., Country, State).</li>
+                    <li>Customize marks by size, color, or shape.</li>
+                    <li>Add layers like territories or custom geocoding.</li>
+                </ol>
+                <p><strong>Practice</strong>: Create a map showing sales by state.</p>
+                <a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">Download Mapping Template</a>
+            </article>
+        </div>
+        <!-- Advanced Tutorials -->
+        <div class="tutorial-level">
+            <h3>Advanced</h3>
+            <article class="tutorial">
+                <h4>Level of Detail (LOD) Expressions</h4>
+                <img src="images/tableau_lod.png" alt="Tableau LOD expression example">
+                <p>LOD expressions give precise control over the granularity of calculations.</p>
+                <p><strong>Examples</strong>:</p>
+                <pre>
+// Fixed LOD: Sales per customer regardless of view dimensions
+{FIXED [Customer ID] : SUM([Sales])}
+
+// Include LOD: Sales per region within each category
+{INCLUDE [Region] : SUM([Sales])}
+
+// Exclude LOD: Sales per category ignoring region
+{EXCLUDE [Region] : SUM([Sales])}
+                </pre>
+                <p><strong>Practice</strong>: Calculate average sales per customer.</p>
+                <a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">Download LOD Template</a>
+            </article>
+            <article class="tutorial">
+                <h4>Table Calculations</h4>
+                <img src="images/tableau_table_calcs.png" alt="Tableau table calculation setup">
+                <p>Table calculations perform computations based on the table structure.</p>
+                <p><strong>Examples</strong>:</p>
+                <ul>
+                    <li>Percent of Total</li>
+                    <li>Running Sum</li>
+                    <li>Difference From</li>
+                    <li>Rank</li>
+                </ul>
+                <p><strong>Steps</strong>:</p>
+                <ol>
+                    <li>Add a calculation to the view (e.g., SUM(Sales)).</li>
+                    <li>Right-click the measure and select Add Table Calculation.</li>
+                    <li>Choose calculation type and addressing.</li>
+                </ol>
+                <p><strong>Practice</strong>: Create a view showing sales growth month-over-month.</p>
+                <a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">Download Table Calcs Template</a>
+            </article>
+            <article class="tutorial">
+                <h4>Advanced Dashboard Techniques</h4>
+                <img src="images/tableau_advanced_dash.png" alt="Tableau dashboard with actions">
+                <p>Create sophisticated dashboards with actions and parameters.</p>
+                <p><strong>Techniques</strong>:</p>
+                <ul>
+                    <li>Dashboard actions (filter, highlight, URL)</li>
+                    <li>Parameter controls with conditional visibility</li>
+                    <li>Navigation between dashboards</li>
+                    <li>Dynamic titles and annotations</li>
+                </ul>
+                <p><strong>Practice</strong>: Build a dashboard with filter actions between views.</p>
+                <a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">Download Advanced Dashboard Template</a>
+            </article>
+            <article class="tutorial">
+                <h4>Tableau Server/Online</h4>
+                <img src="images/tableau_server.png" alt="Tableau Server interface">
+                <p>Share and collaborate on Tableau workbooks in the cloud.</p>
+                <p><strong>Steps</strong>:</p>
+                <ol>
+                    <li>Publish workbook to Tableau Server or Online.</li>
+                    <li>Organize content in projects.</li>
+                    <li>Set permissions for users and groups.</li>
+                    <li>Schedule data extracts for automatic refresh.</li>
+                </ol>
+                <p><strong>Practice</strong>: Publish a sample workbook to Tableau Public.</p>
+                <a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">Download Publishing Guide</a>
+            </article>
+        </div>
+    </section>
+
+    <section id="resources">
+        <h2>Resources</h2>
+        <p>Download templates and datasets to practice your skills:</p>
+        <ul>
+            <li><a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">GitHub Repository</a></li>
+            <li><a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">Sample Superstore Dataset</a></li>
+            <li><a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">Tableau Templates</a></li>
+        </ul>
     </section>
 
     <footer>
-        <p>&copy; 2025 My Knowledge Base. All rights reserved.</p>
+        <p>© 2025 Sunil Malluri. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
-<header>
-    <h1>Excel Tutorials</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="excel.html">Excel</a></li>
-            <li><a href="powerbi.html">Power BI</a></li>
-            <li><a href="tableau.html">Tableau</a></li>
-        </ul>
-    </nav>
-</header>
