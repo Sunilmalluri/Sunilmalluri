@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn Excel for data analysis with tutorials on formulas, pivot tables, and VBA.">
+    <meta name="description" content="Master Excel for data analysis with tutorials on formulas, pivot tables, VBA, Power Query, and more.">
     <title>Excel Tutorials for Data Analysis</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -24,72 +24,186 @@
     <section id="intro">
         <h2>Master Excel for Data Analysis</h2>
         <p>Learn Microsoft Excel with tutorials, formulas, and tips tailored for data analysts. From data cleaning to advanced dashboards, level up your skills with practical examples.</p>
+        <input type="text" id="search" placeholder="Search tutorials...">
     </section>
 
     <section id="tutorials">
         <h2>Excel Tutorials</h2>
+        <!-- Beginner Tutorials -->
         <div class="tutorial-level">
-            <h3>Beginner: Introduction to Excel Formulas</h3>
-            <article>
+            <h3>Beginner</h3>
+            <article class="tutorial">
                 <h4>Key Formulas for Data Summaries</h4>
-                <p>Excel formulas are the foundation of data analysis. Here are three essential formulas to get started:</p>
+                <p>Excel formulas are the foundation of data analysis. Here are three essential formulas:</p>
                 <ul>
-                    <li><strong>SUM</strong>: Adds values in a range. Example: <code>=SUM(A1:A10)</code> calculates the total of cells A1 to A10.</li>
-                    <li><strong>AVERAGE</strong>: Computes the mean of a range. Example: <code>=AVERAGE(B1:B10)</code> finds the average of cells B1 to B10.</li>
-                    <li><strong>IF</strong>: Performs conditional logic. Example: <code>=IF(C1>100, "High", "Low")</code> labels values above 100 as "High".</li>
+                    <li><strong>SUM</strong>: Adds values. Example: <code>=SUM(A1:A10)</code>.</li>
+                    <li><strong>AVERAGE</strong>: Computes mean. Example: <code>=AVERAGE(B1:B10)</code>.</li>
+                    <li><strong>IF</strong>: Conditional logic. Example: <code>=IF(C1>100, "High", "Low")</code>.</li>
                 </ul>
-                <p><strong>Practice</strong>: Create a dataset with sales data (e.g., column A for quantities, column B for prices). Use SUM to calculate total sales and IF to flag high-value transactions.</p>
+                <p><strong>Practice</strong>: Create a sales dataset and use SUM and IF to analyze it.</p>
                 <a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">Download Sample Dataset</a>
             </article>
-        </div>
-        <div class="tutorial-level">
-            <h3>Intermediate: Pivot Tables for Data Analysis</h3>
-            <article>
-                <h4>Creating Dynamic Summaries</h4>
-                <p>Pivot tables allow you to summarize and analyze large datasets without formulas. They’re perfect for exploring trends and patterns.</p>
-                <p><strong>Steps to Create a Pivot Table</strong>:</p>
+            <article class="tutorial">
+                <h4>Basic Data Formatting</h4>
+                <p>Proper formatting improves readability and analysis.</p>
+                <p><strong>Steps</strong>:</p>
                 <ol>
-                    <li>Select your dataset (e.g., sales data with columns: Date, Product, Region, Sales).</li>
-                    <li>Go to <strong>Insert > Pivot Table</strong> and choose a location (new or existing worksheet).</li>
-                    <li>Drag fields to areas:
-                        <ul>
-                            <li><strong>Rows</strong>: Product (to group by product).</li>
-                            <li><strong>Columns</strong>: Region (to compare across regions).</li>
-                            <li><strong>Values</strong>: Sales (set to Sum or Average).</li>
-                        </ul>
-                    </li>
-                    <li>Add filters (e.g., Date) to focus on specific time periods.</li>
+                    <li><strong>Number Formats</strong>: Select cells, go to <strong>Home > Number Format</strong> (e.g., Currency for sales).</li>
+                    <li><strong>Conditional Formatting</strong>: Highlight cells (e.g., <strong>Home > Conditional Formatting > Highlight Cells Rules</strong> to flag values > 100).</li>
+                    <li><strong>Tables</strong>: Select data, go to <strong>Insert > Table</strong> for auto-filtering.</li>
                 </ol>
-                <p><strong>Practice</strong>: Use a pivot table to summarize total sales by product and region. Add a slicer for interactive filtering.</p>
-                <a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">Download Pivot Table Template</a>
+                <p><strong>Practice</strong>: Format a dataset with currency and highlight high sales.</p>
+                <a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">Download Formatting Template</a>
+            </article>
+            <article class="tutorial">
+                <h4>Data Entry and Validation</h4>
+                <p>Data validation ensures clean, consistent inputs.</p>
+                <p><strong>Steps</strong>:</p>
+                <ol>
+                    <li>Select a column (e.g., Region).</li>
+                    <li>Go to <strong>Data > Data Validation</strong>, choose <strong>List</strong>, and enter values (e.g., "North,South,East,West").</li>
+                    <li>Test by entering data; invalid entries will be flagged.</li>
+                </ol>
+                <p><strong>Practice</strong>: Add validation to a column for product categories.</p>
+                <a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">Download Validation Template</a>
+            </article>
+            <article class="tutorial">
+                <h4>Simple Charts</h4>
+                <p>Charts visualize trends effectively.</p>
+                <p><strong>Steps</strong>:</p>
+                <ol>
+                    <li>Select data (e.g., Product and Sales columns).</li>
+                    <li>Go to <strong>Insert > Chart</strong> (e.g., Bar or Line).</li>
+                    <li>Customize via <strong>Chart Design</strong> (add titles, labels).</li>
+                </ol>
+                <p><strong>Practice</strong>: Create a bar chart for sales by product.</p>
+                <a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">Download Chart Template</a>
             </article>
         </div>
+        <!-- Intermediate Tutorials -->
         <div class="tutorial-level">
-            <h3>Advanced: Automating Tasks with VBA</h3>
-            <article>
-                <h4>Streamlining Repetitive Tasks</h4>
-                <p>Visual Basic for Applications (VBA) lets you automate repetitive Excel tasks, such as formatting or data processing.</p>
-                <p><strong>Example: Auto-Format a Table</strong></p>
+            <h3>Intermediate</h3>
+            <article class="tutorial">
+                <h4>Pivot Tables for Data Analysis</h4>
+                <p>Pivot tables summarize large datasets dynamically.</p>
+                <p><strong>Steps</strong>:</p>
+                <ol>
+                    <li>Select data (e.g., Date, Product, Region, Sales).</li>
+                    <li>Go to <strong>Insert > Pivot Table</strong>.</li>
+                    <li>Drag fields: Product to Rows, Region to Columns, Sales to Values (Sum).</li>
+                    <li>Add Date to Filters for time-based analysis.</li>
+                </ol>
+                <p><strong>Practice</strong>: Summarize sales by product and region with a slicer.</p>
+                <a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">Download Pivot Table Template</a>
+            </article>
+            <article class="tutorial">
+                <h4>VLOOKUP and HLOOKUP</h4>
+                <p>Lookups merge data from multiple tables.</p>
+                <p><strong>Example</strong>: <code>=VLOOKUP(A2, B$2:C$100, 2, FALSE)</code> finds a value in column B and returns the corresponding value from column C.</p>
+                <p><strong>Steps</strong>:</p>
+                <ol>
+                    <li>Ensure lookup table is sorted (for approximate match) or use FALSE for exact match.</li>
+                    <li>Write VLOOKUP for vertical lookups or HLOOKUP for horizontal.</li>
+                </ol>
+                <p><strong>Practice</strong>: Merge customer IDs with names using VLOOKUP.</p>
+                <a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">Download Lookup Template</a>
+            </article>
+            <article class="tutorial">
+                <h4>Data Cleaning Techniques</h4>
+                <p>Clean data ensures accurate analysis.</p>
+                <p><strong>Techniques</strong>:</p>
+                <ul>
+                    <li><strong>Text to Columns</strong>: Split data (e.g., <strong>Data > Text to Columns</strong> for "First Last" names).</li>
+                    <li><strong>Remove Duplicates</strong>: <strong>Data > Remove Duplicates</strong> to eliminate redundant rows.</li>
+                    <li><strong>Flash Fill</strong>: Auto-fill patterns (e.g., extract first names).</li>
+                </ul>
+                <p><strong>Practice</strong>: Clean a dataset with duplicate rows and combined names.</p>
+                <a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">Download Cleaning Template</a>
+            </article>
+            <article class="tutorial">
+                <h4>Advanced Formulas</h4>
+                <p>Complex formulas enable deeper analysis.</p>
+                <ul>
+                    <li><strong>INDEX/MATCH</strong>: <code>=INDEX(B2:B100, MATCH(A2, A2:A100, 0))</code> for flexible lookups.</li>
+                    <li><strong>SUMIFS</strong>: <code>=SUMIFS(C2:C100, A2:A100, "North", B2:B100, ">100")</code> for conditional sums.</li>
+                </ul>
+                <p><strong>Practice</strong>: Use INDEX/MATCH to find sales by product and SUMIFS for regional totals.</p>
+                <a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">Download Formula Template</a>
+            </article>
+        </div>
+        <!-- Advanced Tutorials -->
+        <div class="tutorial-level">
+            <h3>Advanced</h3>
+            <article class="tutorial">
+                <h4>Automating Tasks with VBA</h4>
+                <p>VBA automates repetitive tasks.</p>
+                <p><strong>Example: Format Table</strong></p>
                 <pre>
 Sub FormatTable()
     Dim ws As Worksheet
     Set ws = ActiveSheet
     With ws.Range("A1:D100")
-        .Interior.Color = RGB(200, 200, 200) ' Light gray background
+        .Interior.Color = RGB(200, 200, 200)
         .Borders.LineStyle = xlContinuous
         .Rows(1).Font.Bold = True
     End With
     MsgBox "Table formatted!"
 End Sub
                 </pre>
-                <p><strong>How to Use</strong>:</p>
+                <p><strong>Steps</strong>:</p>
                 <ol>
-                    <li>Press <strong>Alt + F11</strong> to open the VBA editor.</li>
-                    <li>Insert a new module and paste the code above.</li>
-                    <li>Run the macro to format a table in cells A1:D100.</li>
+                    <li>Press <strong>Alt + F11</strong>, insert a module.</li>
+                    <li>Paste and run the macro.</li>
                 </ol>
-                <p><strong>Practice</strong>: Modify the macro to highlight cells with values above a threshold (e.g., Sales > 1000).</p>
+                <p><strong>Practice</strong>: Highlight cells with Sales > 1000.</p>
                 <a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">Download VBA Examples</a>
+            </article>
+            <article class="tutorial">
+                <h4>Power Query for Data Transformation</h4>
+                <p>Power Query imports and cleans data efficiently.</p>
+                <p><strong>Steps</strong>:</p>
+                <ol>
+                    <li>Go to <strong>Data > Get Data > From File</strong> (e.g., CSV).</li>
+                    <li>Use Power Query Editor to remove nulls, filter rows, or split columns.</li>
+                    <li>Load transformed data to Excel.</li>
+                </ol>
+                <p><strong>Practice</strong>: Import a CSV and clean it with Power Query.</p>
+                <a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">Download Power Query Template</a>
+            </article>
+            <article class="tutorial">
+                <h4>Dynamic Dashboards</h4>
+                <p>Dashboards visualize KPIs interactively.</p>
+                <p><strong>Steps</strong>:</p>
+                <ol>
+                    <li>Create pivot tables for key metrics (e.g., Sales by Region).</li>
+                    <li>Insert pivot charts (<strong>Insert > PivotChart</strong>).</li>
+                    <li>Add slicers (<strong>PivotTable Analyze > Insert Slicer</strong>) for filtering.</li>
+                </ol>
+                <p><strong>Practice</strong>: Build a dashboard with sales charts and slicers.</p>
+                <a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">Download Dashboard Template</a>
+            </article>
+            <article class="tutorial">
+                <h4>Advanced VBA for Data Processing</h4>
+                <p>Advanced VBA processes large datasets.</p>
+                <p><strong>Example: Generate Summary Report</strong></p>
+                <pre>
+Sub GenerateReport()
+    Dim ws As Worksheet, summary As Worksheet
+    Set ws = ActiveSheet
+    Set summary = Worksheets.Add
+    summary.Name = "Summary"
+    summary.Range("A1").Value = "Total Sales"
+    summary.Range("A2").Value = Application.Sum(ws.Range("C:C"))
+    MsgBox "Report generated!"
+End Sub
+                </pre>
+                <p><strong>Steps</strong>:</p>
+                <ol>
+                    <li>Add to VBA module and run.</li>
+                    <li>Check new "Summary" sheet.</li>
+                </ol>
+                <p><strong>Practice</strong>: Modify to summarize by region.</p>
+                <a href="https://github.com/Sunilmalluri/Sunilmalluri" target="_blank">Download Advanced VBA Examples</a>
             </article>
         </div>
     </section>
