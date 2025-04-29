@@ -1,51 +1,24 @@
-/* General Styles */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: Arial, sans-serif; text-align: center; background-color: #f4f4f4; }
+document.addEventListener("DOMContentLoaded", function() {
+    // Mobile Menu Toggle
+    const menu = document.querySelector('.nav-links');
+    const burger = document.querySelector('.hamburger');
+    burger.addEventListener('click', () => {
+        menu.classList.toggle('nav-active');
+    });
 
-/* Header */
-header { background-color: #333; color: white; padding: 15px; position: relative; }
-h1 { margin-bottom: 10px; }
-
-/* Navigation */
-nav ul { list-style-type: none; background-color: #333; padding: 0; }
-nav ul li { display: inline-block; }
-nav ul li a { color: white; text-decoration: none; padding: 15px 20px; display: block; font-size: 18px; }
-nav ul li a:hover { background-color: #555; }
-
-/* Mobile Menu */
-.hamburger { display: none; background: none; border: none; font-size: 30px; color: white; cursor: pointer; position: absolute; top: 15px; right: 15px; }
-@media (max-width: 768px) {
-    .nav-links { display: none; flex-direction: column; width: 100%; background-color: #333; position: absolute; top: 60px; left: 0; }
-    .nav-links li { display: block; width: 100%; }
-    .hamburger { display: block; }
-}
-.nav-active { display: flex !important; }
-
-/* Search Bar */
-#search { width: 80%; padding: 10px; margin: 10px auto; border-radius: 5px; border: 1px solid #ccc; display: block; }
-
-/* Sections */
-#intro, #tutorials, #resources { width: 80%; margin: 20px auto; }
-#intro h2, #tutorials h2, #resources h2 { color: #007bff; margin-bottom: 10px; }
-.tutorial-level { margin-bottom: 20px; }
-.tutorial-level h3 { color: #333; margin: 10px 0; }
-
-/* Articles */
-article.tutorial { background: #f8f9fa; padding: 15px; border-left: 5px solid #007bff; margin-bottom: 20px; border-radius: 5px; text-align: left; }
-article.tutorial h4 { color: #007bff; margin-bottom: 10px; }
-article.tutorial p { margin: 10px 0; }
-article.tutorial ul, article.tutorial ol { margin: 10px 0 10px 20px; }
-article.tutorial code { background: #e9ecef; padding: 2px 5px; border-radius: 3px; }
-article.tutorial pre { background: #e9ecef; padding: 10px; border-radius: 5px; overflow-x: auto; }
-article.tutorial a { display: inline-block; padding: 5px 10px; background: #007bff; color: white; text-decoration: none; border-radius: 3px; margin-top: 10px; }
-article.tutorial a:hover { background: #0056b3; }
-article.tutorial img { max-width: 100%; height: auto; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
-
-/* Resources */
-#resources ul { list-style: none; text-align: left; }
-#resources ul li { margin: 10px 0; }
-#resources ul li a { color: #007bff; text-decoration: none; }
-#resources ul li a:hover { text-decoration: underline; }
-
-/* Footer */
-footer { background-color: #333; color: white; padding: 10px; margin-top: 20px; }
+    // Search Bar Functionality
+    const searchInput = document.getElementById("search");
+    searchInput.addEventListener("keyup", function() {
+        let filter = this.value.toLowerCase();
+        let tutorials = document.querySelectorAll(".tutorial");
+        tutorials.forEach(tutorial => {
+            let title = tutorial.querySelector("h4").textContent.toLowerCase();
+            let content = tutorial.textContent.toLowerCase();
+            if (title.includes(filter) || content.includes(filter)) {
+                tutorial.style.display = "";
+            } else {
+                tutorial.style.display = "none";
+            }
+        });
+    });
+});
