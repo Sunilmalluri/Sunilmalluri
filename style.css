@@ -21,6 +21,9 @@ nav ul li a:hover { background-color: #555; }
 }
 .nav-active { display: flex !important; }
 
+/* Search Bar */
+#search { width: 80%; padding: 10px; margin: 10px auto; border-radius: 5px; border: 1px solid #ccc; display: block; }
+
 /* Sections */
 #intro, #tutorials, #resources { width: 80%; margin: 20px auto; }
 #intro h2, #tutorials h2, #resources h2 { color: #007bff; margin-bottom: 10px; }
@@ -28,14 +31,14 @@ nav ul li a:hover { background-color: #555; }
 .tutorial-level h3 { color: #333; margin: 10px 0; }
 
 /* Articles */
-article { background: #f8f9fa; padding: 15px; border-left: 5px solid #007bff; margin-bottom: 20px; border-radius: 5px; text-align: left; }
-article h4 { color: #007bff; margin-bottom: 10px; }
-article p { margin: 10px 0; }
-article ul, article ol { margin: 10px 0 10px 20px; }
-article code { background: #e9ecef; padding: 2px 5px; border-radius: 3px; }
-article pre { background: #e9ecef; padding: 10px; border-radius: 5px; overflow-x: auto; }
-article a { display: inline-block; padding: 5px 10px; background: #007bff; color: white; text-decoration: none; border-radius: 3px; margin-top: 10px; }
-article a:hover { background: #0056b3; }
+article.tutorial { background: #f8f9fa; padding: 15px; border-left: 5px solid #007bff; margin-bottom: 20px; border-radius: 5px; text-align: left; }
+article.tutorial h4 { color: #007bff; margin-bottom: 10px; }
+article.tutorial p { margin: 10px 0; }
+article.tutorial ul, article.tutorial ol { margin: 10px 0 10px 20px; }
+article.tutorial code { background: #e9ecef; padding: 2px 5px; border-radius: 3px; }
+article.tutorial pre { background: #e9ecef; padding: 10px; border-radius: 5px; overflow-x: auto; }
+article.tutorial a { display: inline-block; padding: 5px 10px; background: #007bff; color: white; text-decoration: none; border-radius: 3px; margin-top: 10px; }
+article.tutorial a:hover { background: #0056b3; }
 
 /* Resources */
 #resources ul { list-style: none; text-align: left; }
