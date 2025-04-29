@@ -1,47 +1,57 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener('DOMContentLoaded', () => {
     // Mobile Menu Toggle
-    const menu = document.querySelector('.nav-links');
-    const burger = document.querySelector('.hamburger');
-    burger.addEventListener('click', () => {
-        menu.classList.toggle('nav-active');
-    });
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', () => {
+            const isExpanded = navLinks.classList.toggle('nav-active');
+            hamburger.setAttribute('aria-expanded', isExpanded);
+            hamburger.textContent = isExpanded ? '✕' : '☰'; // Toggle icon
+        });
+
+        // Close menu when a link is clicked
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('nav-active');
+                hamburger.setAttribute('aria-expanded', 'false');
+                hamburger.textContent = '☰';
+            });
+        });
+    }
 
     // Search Bar Functionality
-    const searchInput = document.getElementById("search");
-    searchInput.addEventListener("keyup", function() {
-        let filter = this.value.toLowerCase();
-        let tutorials = document.querySelectorAll(".tutorial");
-        tutorials.forEach(tutorial => {
-            let title = tutorial.querySelector("h4").textContent.toLowerCase();
-            let content = tutorial.textContent.toLowerCase();
-            if (title.includes(filter) || content.includes(filter)) {
-                tutorial.style.display = "";
-            } else {
-                tutorial.style.display = "none";
-            }
+    const searchInput = document.getElementById('search');
+    if (searchInput) {
+        searchInput.addEventListener('keyup', () => {
+            const filter = searchInput.value.toLowerCase();
+            const tutorials = document.querySelectorAll('.tutorial-card, .tutorial');
+
+            tutorials.forEach(tutorial => {
+                const titleElement = tutorial.querySelector('h3') || tutorial.querySelector('h4');
+                const title = titleElement ? titleElement.textContent.toLowerCase() : '';
+                const content = tutorial.textContent.toLowerCase();
+
+                if (title.includes(filter) || content.includes(filter)) {
+                    tutorial.style.display = '';
+                } else {
+                    tutorial.style.display = 'none';
+                }
+            });
         });
-    });
-});document.addEventListener("DOMContentLoaded", function() {
-    // Mobile Menu Toggle
-    const menu = document.querySelector('.nav-links');
-    const burger = document.querySelector('.hamburger');
-    burger.addEventListener('click', () => {
-        menu.classList.toggle('nav-active');
+    }
+
+    // Back to Top Button (Optional)
+    const backToTopBtn = document.createElement('button');
+    backToTopBtn.textContent = '↑ Top';
+    backToTopBtn.className = 'back-to-top';
+    document.body.appendChild(backToTopBtn);
+
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // Search Bar Functionality
-    const searchInput = document.getElementById("search");
-    searchInput.addEventListener("keyup", function() {
-        let filter = this.value.toLowerCase();
-        let tutorials = document.querySelectorAll(".tutorial");
-        tutorials.forEach(tutorial => {
-            let title = tutorial.querySelector("h4").textContent.toLowerCase();
-            let content = tutorial.textContent.toLowerCase();
-            if (title.includes(filter) || content.includes(filter)) {
-                tutorial.style.display = "";
-            } else {
-                tutorial.style.display = "none";
-            }
-        });
+    window.addEventListener('scroll', () => {
+        backToTopBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
     });
 });
