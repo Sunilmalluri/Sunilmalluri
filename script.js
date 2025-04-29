@@ -7,19 +7,18 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Search Bar Functionality
-    document.getElementById("search").addEventListener("keyup", function() {
+    const searchInput = document.getElementById("search");
+    searchInput.addEventListener("keyup", function() {
         let filter = this.value.toLowerCase();
-        let items = document.querySelectorAll("nav ul li a");
-        items.forEach(item => {
-            if (item.innerHTML.toLowerCase().includes(filter)) {
-                item.style.display = "";
+        let tutorials = document.querySelectorAll(".tutorial");
+        tutorials.forEach(tutorial => {
+            let title = tutorial.querySelector("h4").textContent.toLowerCase();
+            let content = tutorial.textContent.toLowerCase();
+            if (title.includes(filter) || content.includes(filter)) {
+                tutorial.style.display = "";
             } else {
-                item.style.display = "none";
+                tutorial.style.display = "none";
             }
         });
     });
-});
-
-document.querySelector('.hamburger').addEventListener('click', () => {
-    document.querySelector('.nav-links').classList.toggle('nav-active');
 });
