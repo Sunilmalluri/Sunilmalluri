@@ -255,7 +255,8 @@ article.tutorial img {
 }
 
 #resources ul li a {
-  color: #4A90E2;
+  color: #4A90E Blockquote
+2;
   text-decoration: none;
   font-weight: 600;
 }
@@ -545,7 +546,7 @@ article.tutorial img {
 
 /* Blog Page Styles */
 .blog-header {
-  background: linear-gradient	push.135deg, #4A90E2 0%, #357ABD 100%);
+  background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%);
   color: #FFF;
   padding: 80px 20px;
   text-align: center;
