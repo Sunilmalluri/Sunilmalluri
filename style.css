@@ -7,15 +7,35 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
+  font-size: 1rem; /* 16px */
   line-height: 1.6;
   background-color: #F5F5F5;
   color: #333;
-  text-align: center;
 }
 
 h1, h2, h3, h4 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
+}
+
+h1 {
+  font-size: 2rem; /* 32px, was 2.5rem */
+}
+
+h2 {
+  font-size: 1.8rem; /* 28.8px, was 2rem */
+}
+
+h3 {
+  font-size: 1.2rem; /* 19.2px, was 1.4rem */
+}
+
+h4 {
+  font-size: 1.1rem; /* 17.6px, was 1.3rem */
+}
+
+p {
+  font-size: 0.9rem; /* 14.4px, was 1rem */
 }
 
 /* Header */
@@ -24,11 +44,6 @@ header {
   color: #FFF;
   padding: 20px;
   position: relative;
-}
-
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
 }
 
 /* Navigation */
@@ -50,7 +65,7 @@ nav ul li a {
   color: #FFF;
   text-decoration: none;
   padding: 15px 25px;
-  font-size: 1.1rem;
+  font-size: 1rem; /* 16px, was 1.1rem */
   transition: background-color 0.3s ease;
 }
 
@@ -113,7 +128,7 @@ nav ul li a:hover {
 
   .nav-links li a {
     padding: 20px;
-    font-size: 1.2rem;
+    font-size: 1.1rem; /* 17.6px, was 1.2rem */
     text-align: left;
     display: block;
     color: #FFF;
@@ -134,7 +149,7 @@ nav ul li a:hover {
   margin: 20px auto;
   border-radius: 8px;
   border: 1px solid #CCC;
-  font-size: 1rem;
+  font-size: 0.9rem; /* 14.4px, was 1rem */
   transition: border-color 0.3s ease;
 }
 
@@ -167,7 +182,7 @@ a[aria-disabled="true"]:hover {
 
 #intro h2, #tutorials h2, #resources h2, #blog-preview h2, #roadmap h2 {
   color: #4A90E2;
-  font-size: 2rem;
+  font-size: 1.8rem; /* 28.8px, was 2rem */
   margin-bottom: 20px;
 }
 
@@ -177,7 +192,7 @@ a[aria-disabled="true"]:hover {
 
 .tutorial-level h3 {
   color: #2E2E2E;
-  font-size: 1.5rem;
+  font-size: 1.2rem; /* 19.2px, was 1.5rem */
   margin: 15px 0;
 }
 
@@ -194,7 +209,7 @@ article.tutorial {
 
 article.tutorial h4 {
   color: #4A90E2;
-  font-size: 1.3rem;
+  font-size: 1.1rem; /* 17.6px, was 1.3rem */
   margin-bottom: 15px;
 }
 
@@ -278,19 +293,19 @@ article.tutorial img {
   z-index: 1;
   max-width: 800px;
   margin: 0 auto;
-  background: rgba(0, 0, 0, 0.3); /* Subtle background for text readability */
+  background: rgba(0, 0, 0, 0.3);
   padding: 20px;
   border-radius: 8px;
 }
 
 .hero-content h2 {
-  font-size: 3rem;
+  font-size: 2.5rem; /* 40px, was 3rem */
   margin-bottom: 25px;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero-content p {
-  font-size: 1.3rem;
+  font-size: 1.1rem; /* 17.6px, was 1.3rem */
   margin-bottom: 40px;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
@@ -302,6 +317,7 @@ article.tutorial img {
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
+  font-size: 0.9rem; /* 14.4px, was inherited */
   transition: all 0.3s ease;
 }
 
@@ -333,7 +349,7 @@ article.tutorial img {
 
 .about-text h2 {
   color: #4A90E2;
-  font-size: 2rem;
+  font-size: 1.8rem; /* 28.8px, was 2rem */
   margin-bottom: 25px;
 }
 
@@ -349,7 +365,7 @@ article.tutorial img {
 
 .contact-info span {
   margin-right: 12px;
-  font-size: 1.3rem;
+  font-size: 1.1rem; /* 17.6px, was 1.3rem */
 }
 
 /* Tutorials Section */
@@ -380,7 +396,7 @@ article.tutorial img {
 
 .tutorial-card h3 {
   color: #4A90E2;
-  font-size: 1.4rem;
+  font-size: 1.2rem; /* 19.2px, was 1.4rem */
   margin-bottom: 15px;
 }
 
@@ -390,6 +406,7 @@ article.tutorial img {
   padding: 10px 20px;
   border-radius: 8px;
   text-decoration: none;
+  font-size: 0.9rem; /* 14.4px, was inherited */
   transition: background-color 0.3s ease;
 }
 
@@ -419,7 +436,7 @@ article.tutorial img {
 
 .roadmap-card h3 {
   color: #4A90E2;
-  font-size: 1.4rem;
+  font-size: 1.2rem; /* 19.2px, was 1.4rem */
   margin-bottom: 15px;
 }
 
@@ -443,7 +460,7 @@ article.tutorial img {
 
 .resource-item h3 {
   color: #4A90E2;
-  font-size: 1.4rem;
+  font-size: 1.2rem; /* 19.2px, was 1.4rem */
   margin-bottom: 20px;
 }
 
@@ -451,6 +468,7 @@ article.tutorial img {
   color: #4A90E2;
   font-weight: 600;
   text-decoration: none;
+  font-size: 0.9rem; /* 14.4px, was inherited */
 }
 
 .resource-link:hover {
@@ -473,13 +491,13 @@ article.tutorial img {
 
 .blog-post h3 {
   color: #4A90E2;
-  font-size: 1.4rem;
+  font-size: 1.2rem; /* 19.2px, was 1.4rem */
   margin-bottom: 15px;
 }
 
 .post-date {
   color: #666;
-  font-size: 0.9rem;
+  font-size: 0.8rem; /* 12.8px, was 0.9rem */
   margin-bottom: 15px;
 }
 
@@ -488,6 +506,7 @@ article.tutorial img {
   color: #4A90E2;
   font-weight: 600;
   text-decoration: none;
+  font-size: 0.9rem; /* 14.4px, was inherited */
   transition: all 0.3s ease;
 }
 
@@ -496,116 +515,60 @@ article.tutorial img {
   transform: translateX(5px);
 }
 
-.sidebar {
-  background: #F8F9FA;
-  padding: 30px;
-  border-radius: 10px;
-  height: fit-content;
-}
-
-.sidebar h3 {
-  color: #4A90E2;
-  font-size: 1.4rem;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid #4A90E2;
-}
-
-.categories-list, .popular-posts {
-  list-style: none;
-  margin-bottom: 30px;
-}
-
-.categories-list li, .popular-posts li {
-  margin-bottom: 12px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid #E0E0E0;
-}
-
-.categories-list a, .popular-posts a {
-  color: #333;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.categories-list a:hover, .popular-posts a:hover {
-  color: #4A90E2;
-  padding-left: 5px;
-}
-
-.categories-list a.active {
-  color: #4A90E2;
-  font-weight: 600;
-  background-color: #E9ECEF;
-  padding: 4px 8px;
-  border-radius: 4px;
-}
-
-.search-form input,
-.newsletter-form input {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 12px;
-  border: 1px solid #CCC;
-  border-radius: 8px;
-  font-size: 1rem;
-}
-
-.search-form button,
-.newsletter-form button {
-  background: #4A90E2;
+/* Footer */
+footer {
+  background: #2E2E2E;
   color: #FFF;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  width: 100%;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
+  padding: 40px 20px;
 }
 
-.search-form button:hover,
-.newsletter-form button:hover {
-  background: #357ABD;
-}
-
-.pagination {
+.footer-content {
   display: flex;
   justify-content: center;
-  margin-top: 30px;
-  margin-bottom: 20px;
-  grid-column: 1 / -1;
-  height: 40px;
-  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.pagination a {
-  color: #4A90E2;
-  background: #FFF;
-  padding: 8px 16px;
+.footer-links, .footer-contact {
+  text-align: left;
+}
+
+.footer-links h3, .footer-contact h3 {
+  color: #FFF;
+  font-size: 1.1rem; /* 17.6px, was 1.4rem */
+  margin-bottom: 15px;
+}
+
+.footer-links ul, .footer-contact ul {
+  list-style: none;
+}
+
+.footer-links ul li, .footer-contact ul li {
+  margin: 10px 0;
+}
+
+.footer-links ul li a, .footer-contact ul li a {
+  color: #FFF;
   text-decoration: none;
-  border: 1px solid #CCC;
-  margin: 0 5px;
-  border-radius: 8px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  height: 32px;
-  line-height: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1rem;
+  font-size: 0.9rem; /* 14.4px, was inherited */
+  transition: opacity 0.3s ease;
 }
 
-.pagination a.active {
-  background-color: #4A90E2 !important;
-  color: #FFF !important;
-  border: 1px solid #4A90E2 !important;
-  height: 32px;
-  line-height: 16px;
+.footer-links ul li a:hover, .footer-contact ul li a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
 }
 
-.pagination a:hover:not(.active) {
-  background: #E9ECEF;
+.copyright {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+}
+
+.copyright p {
+  font-size: 0.8rem; /* 12.8px, was 1rem */
 }
 
 /* Blog Page Styles */
@@ -618,12 +581,12 @@ article.tutorial img {
 }
 
 .blog-header h1 {
-  font-size: 3rem;
+  font-size: 2.5rem; /* 40px, was 3rem */
   margin-bottom: 25px;
 }
 
 .blog-header p {
-  font-size: 1.3rem;
+  font-size: 1.1rem; /* 17.6px, was 1.3rem */
   max-width: 800px;
   margin: 0 auto;
 }
@@ -640,7 +603,7 @@ article.tutorial img {
 .blog-posts {
   display: grid;
   gap: 40px;
-  min-height: 800px; /* Matches height of 2 posts */
+  min-height: 800px;
 }
 
 .blog-post {
@@ -665,7 +628,7 @@ article.tutorial img {
   align-items: center;
   margin-bottom: 20px;
   color: #666;
-  font-size: 0.9rem;
+  font-size: 0.8rem; /* 12.8px, was 0.9rem */
 }
 
 .post-date {
@@ -676,18 +639,133 @@ article.tutorial img {
   background: #E9ECEF;
   padding: 4px 12px;
   border-radius: 20px;
-  font-size: 0.8rem;
+  font-size: 0.7rem; /* 11.2px, was 0.8rem */
 }
 
 .post-content h2 {
   color: #4A90E2;
-  font-size: 1.8rem;
+  font-size: 1.6rem; /* 25.6px, was 1.8rem */
   margin-bottom: 15px;
 }
 
 .post-excerpt {
   margin-bottom: 20px;
   line-height: 1.6;
+}
+
+/* Sidebar */
+.sidebar {
+  background: #F8F9FA;
+  padding: 30px;
+  border-radius: 10px;
+  height: fit-content;
+}
+
+.sidebar h3 {
+  color: #4A90E2;
+  font-size: 1.2rem; /* 19.2px, was 1.4rem */
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #4A90E2;
+}
+
+.categories-list, .popular-posts {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.categories-list li, .popular-posts li {
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.categories-list a, .popular-posts a {
+  color: #333;
+  text-decoration: none;
+  font-size: 0.9rem; /* 14.4px, was inherited */
+  transition: all 0.3s ease;
+}
+
+.categories-list a:hover, .popular-posts a:hover {
+  color: #4A90E2;
+  padding-left: 5px;
+}
+
+.categories-list a.active {
+  color: #4A90E2;
+  font-weight: 600;
+  background-color: #E9ECEF;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.search-form input,
+.newsletter-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #CCC;
+  border-radius: 8px;
+  font-size: 0.9rem; /* 14.4px, was 1rem */
+}
+
+.search-form button,
+.newsletter-form button {
+  background: #4A90E2;
+  color: #FFF;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 0.9rem; /* 14.4px, was 1rem */
+  transition: background-color 0.3s ease;
+}
+
+.search-form button:hover,
+.newsletter-form button:hover {
+  background: #357ABD;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  grid-column: 1 / -1;
+  height: 40px;
+  align-items: center;
+}
+
+.pagination a {
+  color: #4A90E2;
+  background: #FFF;
+  padding: 8px 16px;
+  text-decoration: none;
+  border: 1px solid #CCC;
+  margin: 0 5px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  height: 32px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem; /* 14.4px, was 1rem */
+}
+
+.pagination a.active {
+  background-color: #4A90E2 !important;
+  color: #FFF !important;
+  border: 1px solid #4A90E2 !important;
+  height: 32px;
+  line-height: 16px;
+}
+
+.pagination a:hover:not(.active) {
+  background: #E9ECEF;
 }
 
 /* Back to Top Button */
@@ -702,7 +780,7 @@ article.tutorial img {
   border-radius: 50%;
   cursor: pointer;
   display: none;
-  font-size: 1rem;
+  font-size: 0.9rem; /* 14.4px, was 1rem */
   transition: background-color 0.3s ease;
 }
 
@@ -713,7 +791,11 @@ article.tutorial img {
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .hero-content h2 {
-    font-size: 2.2rem;
+    font-size: 2rem; /* 32px, was 2.2rem */
+  }
+
+  .hero-content p {
+    font-size: 1rem; /* 16px, was 1.3rem */
   }
 
   .about-container {
@@ -743,25 +825,30 @@ article.tutorial img {
   }
 
   .blog-posts {
-    min-height: 600px; /* Adjusted for mobile */
+    min-height: 600px;
   }
 
   .hero-content {
     padding: 15px;
   }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
 @media (max-width: 480px) {
   h1 {
-    font-size: 2rem;
+    font-size: 1.8rem; /* 28.8px, was 2rem */
   }
 
   .hero-content h2 {
-    font-size: 1.8rem;
+    font-size: 1.6rem; /* 25.6px, was 1.8rem */
   }
 
   .hero-content p {
-    font-size: 1.1rem;
+    font-size: 0.9rem; /* 14.4px, was 1.1rem */
   }
 
   .cta-button {
@@ -769,7 +856,7 @@ article.tutorial img {
   }
 
   .blog-header h1 {
-    font-size: 2.2rem;
+    font-size: 2rem; /* 32px, was 2.2rem */
   }
 
   .post-image {
@@ -777,7 +864,7 @@ article.tutorial img {
   }
 
   .blog-posts {
-    min-height: 500px; /* Adjusted for smaller screens */
+    min-height: 500px;
   }
 
   .hero-content {
