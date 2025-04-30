@@ -534,9 +534,9 @@ article.tutorial img {
 }
 
 .pagination a.active {
-  background: #4A90E2 !important;
+  background-color: #4A90E2 !important;
   color: #FFF !important;
-  border: 1px solid #4A90E2;
+  border: 1px solid #4A90E2 !important;
 }
 
 .pagination a:hover:not(.active) {
@@ -545,7 +545,7 @@ article.tutorial img {
 
 /* Blog Page Styles */
 .blog-header {
-  background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%);
+  background: linear-gradient	push.135deg, #4A90E2 0%, #357ABD 100%);
   color: #FFF;
   padding: 80px 20px;
   text-align: center;
