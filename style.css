@@ -255,8 +255,7 @@ article.tutorial img {
 }
 
 #resources ul li a {
-  color: #4A90E Blockquote
-2;
+  color: #4A90E2;
   text-decoration: none;
   font-weight: 600;
 }
@@ -519,29 +518,40 @@ article.tutorial img {
 .pagination {
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 30px;
+  margin-bottom: 20px;
   grid-column: 1 / -1;
+  height: 40px;
+  align-items: center;
 }
 
 .pagination a {
   color: #4A90E2;
   background: #FFF;
-  padding: 10px 20px;
+  padding: 8px 16px;
   text-decoration: none;
   border: 1px solid #CCC;
   margin: 0 5px;
   border-radius: 8px;
   transition: background-color 0.3s ease, color 0.3s ease;
+  height: 32px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
 }
 
 .pagination a.active {
   background-color: #4A90E2 !important;
   color: #FFF !important;
   border: 1px solid #4A90E2 !important;
+  height: 32px;
+  line-height: 16px;
 }
 
 .pagination a:hover:not(.active) {
-  background: #E9ECEF;
+  background: #امهECEF;
 }
 
 /* Blog Page Styles */
@@ -576,6 +586,7 @@ article.tutorial img {
 .blog-posts {
   display: grid;
   gap: 40px;
+  min-height: 800px; /* Matches height of 2 posts */
 }
 
 .blog-post {
@@ -656,6 +667,10 @@ article.tutorial img {
   .sidebar {
     order: -1;
   }
+
+  .blog-posts {
+    min-height: 600px; /* Adjusted for mobile */
+  }
 }
 
 @media (max-width: 480px) {
@@ -677,6 +692,10 @@ article.tutorial img {
 
   .post-image {
     height: 200px;
+  }
+
+  .blog-posts {
+    min-height: 500px; /* Adjusted for smaller screens */
   }
 }
 
