@@ -158,14 +158,14 @@ a[aria-disabled="true"]:hover {
 }
 
 /* Sections */
-#intro, #tutorials, #resources, #blog-preview {
+#intro, #tutorials, #resources, #blog-preview, #roadmap {
   width: 90%;
   max-width: 1200px;
   margin: 40px auto;
   padding: 40px 20px;
 }
 
-#intro h2, #tutorials h2, #resources h2, #blog-preview h2 {
+#intro h2, #tutorials h2, #resources h2, #blog-preview h2, #roadmap h2 {
   color: #4A90E2;
   font-size: 2rem;
   margin-bottom: 20px;
@@ -395,6 +395,36 @@ article.tutorial img {
 
 .card-button:hover {
   background: #357ABD;
+}
+
+/* Roadmap Section */
+.roadmap-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.roadmap-card {
+  background: #FFF;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.roadmap-card:hover {
+  transform: translateY(-8px);
+}
+
+.roadmap-card h3 {
+  color: #4A90E2;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.roadmap-card p {
+  margin-bottom: 20px;
 }
 
 /* Resources Section */
@@ -700,7 +730,7 @@ article.tutorial img {
     justify-content: center;
   }
 
-  .tutorial-grid, .resource-list, .blog-grid {
+  .tutorial-grid, .resource-list, .blog-grid, .roadmap-grid {
     grid-template-columns: 1fr;
   }
 
