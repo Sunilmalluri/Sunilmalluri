@@ -524,17 +524,18 @@ article.tutorial img {
 
 .pagination a {
   color: #4A90E2;
+  background: #FFF;
   padding: 10px 20px;
   text-decoration: none;
   border: 1px solid #CCC;
   margin: 0 5px;
   border-radius: 8px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .pagination a.active {
-  background: #4A90E2;
-  color: #FFF;
+  background: #4A90E2 !important;
+  color: #FFF !important;
   border: 1px solid #4A90E2;
 }
 
