@@ -56,7 +56,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         paginationLinks.forEach(link => {
-            link.classList.toggle('active', parseInt(link.dataset.page) === page);
+            link.classList.remove('active');
+            if (parseInt(link.dataset.page) === page) {
+                link.classList.add('active');
+            }
         });
 
         if (prevLink) prevLink.dataset.page = Math.max(1, page - 1);
