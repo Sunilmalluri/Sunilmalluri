@@ -487,6 +487,14 @@ article.tutorial img {
   padding-left: 5px;
 }
 
+.categories-list a.active {
+  color: #4A90E2;
+  font-weight: 600;
+  background-color: #E9ECEF;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
 .search-form input,
 .newsletter-form input {
   width: 100%;
@@ -551,7 +559,7 @@ article.tutorial img {
 }
 
 .pagination a:hover:not(.active) {
-  background: #امهECEF;
+  background: #E9ECEF;
 }
 
 /* Blog Page Styles */
