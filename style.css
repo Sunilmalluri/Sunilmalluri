@@ -265,7 +265,7 @@ article.tutorial img {
 }
 
 /* Hero Section */
-#hero {
+#hero, #hero-about {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/Data-Analytics.png') no-repeat center center/cover;
   color: #FFF;
   padding: 80px 20px;
@@ -320,6 +320,8 @@ article.tutorial img {
   display: flex;
   align-items: center;
   gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .profile-image img {
