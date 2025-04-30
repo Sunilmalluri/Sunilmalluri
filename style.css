@@ -266,19 +266,54 @@ article.tutorial img {
 
 /* Hero Section */
 #hero {
-  background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%);
+  background: linear-gradient(rgba(74, 144, 226, 0.7), rgba(53, 122, 189, 0.7)), url('images/data-analytics-bg.jpg') no-repeat center center/cover;
   color: #FFF;
   padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+#hero::before, #hero::after {
+  content: '';
+  position: absolute;
+  opacity: 0.2;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#hero::before {
+  background-image: url('images/excel-icon.png');
+  width: 100px;
+  height: 100px;
+  top: 20px;
+  left: 20px;
+}
+
+#hero::after {
+  background-image: url('images/powerbi-icon.png');
+  width: 100px;
+  height: 100px;
+  bottom: 20px;
+  right: 20px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .hero-content h2 {
   font-size: 3rem;
   margin-bottom: 25px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero-content p {
   font-size: 1.3rem;
   margin-bottom: 40px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .cta-button {
@@ -644,6 +679,26 @@ article.tutorial img {
   line-height: 1.6;
 }
 
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #4A90E2;
+  color: #FFF;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.back-to-top:hover {
+  background: #357ABD;
+}
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .hero-content h2 {
@@ -679,6 +734,11 @@ article.tutorial img {
   .blog-posts {
     min-height: 600px; /* Adjusted for mobile */
   }
+
+  #hero::before, #hero::after {
+    width: 80px;
+    height: 80px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -688,6 +748,10 @@ article.tutorial img {
 
   .hero-content h2 {
     font-size: 1.8rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
   }
 
   .cta-button {
@@ -704,6 +768,18 @@ article.tutorial img {
 
   .blog-posts {
     min-height: 500px; /* Adjusted for smaller screens */
+  }
+
+  #hero::before, #hero::after {
+    width: 60px;
+    height: 60px;
+    top: 10px;
+    left: 10px;
+  }
+
+  #hero::after {
+    bottom: 10px;
+    right: 10px;
   }
 }
 
