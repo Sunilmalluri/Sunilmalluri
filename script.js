@@ -41,13 +41,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Pagination Functionality
-    const postsPerPage = 3;
+    const postsPerPage = 2;
     const blogPosts = document.querySelectorAll('.blog-post');
     const paginationLinks = document.querySelectorAll('.pagination-link');
     const prevLink = document.querySelector('.pagination-prev');
     const nextLink = document.querySelector('.pagination-next');
 
     function showPage(page) {
+        console.log(`Showing page: ${page}`); // Debug log
         const start = (page - 1) * postsPerPage;
         const end = start + postsPerPage;
 
@@ -59,6 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
             link.classList.remove('active');
             if (parseInt(link.dataset.page) === page) {
                 link.classList.add('active');
+                console.log(`Active link: ${link.dataset.page}`); // Debug log
             }
         });
 
